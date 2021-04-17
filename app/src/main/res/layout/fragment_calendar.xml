@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CalendarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activities.CalendarActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+            <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/materialize_toolbar"
+                app:datePicker="true"
+                app:type="one_day_picker"
+                app:headerColor="@color/dark"
+                app:selectionColor="@color/green"
+                app:todayLabelColor="@color/green"
+                app:highlightedDaysLabelsColor="@color/red"
+                />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/spacer_medium"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:showDividers="middle"
+                >
+                <Button
+                    android:id="@+id/today"
+                    android:layout_width="120dp"
+                    android:layout_height="31dp"
+                    android:text="Сегодня"
+                    android:textAllCaps="false"
+                    android:background="@drawable/today_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickCalendarToday"
+                    />
+
+                <Button
+                    android:id="@+id/select_date"
+                    android:layout_width="120dp"
+                    android:layout_height="31dp"
+
+                    android:text="Выбрать"
+                    android:textAllCaps="false"
+                    android:background="@drawable/today_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickSelectDate"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    >
+
+<ImageView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:orientation="vertical"
+    android:scaleType="fitCenter"
+    android:paddingTop="@dimen/tool_bar_top_padding"
+    app:srcCompat="@drawable/_7c913f5fa3a4d4c807efbcccfa047f7">
+
+</ImageView>
+
+</LinearLayout>
